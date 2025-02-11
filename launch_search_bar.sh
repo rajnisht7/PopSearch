@@ -1,3 +1,3 @@
 #!/bin/bash
-python3 /home/acer/search_bar/search_bar.py
+python3 <file directory>/search_bar.py
 
