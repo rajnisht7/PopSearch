@@ -21,7 +21,7 @@ SearchBar is a lightweight, modern search bar built with Python and GTK3 that pr
 - Supports shortcut key binding for quick access
 
 
-###You can add More Website in line 213 depending upon your requirement
+##### You can add More Website in line 213 depending upon your requirement
 
 
 ## Installation
@@ -36,7 +36,7 @@ sudo apt install python3 python3-gi python3-gi-cairo gir1.2-gtk-3.0
 pip install requests
 ```
 
-## TO make shortcut one simple step is download the launch_search_bar.sh and directly map this with the favaourable Keys
+##### TO make shortcut one simple step is download the launch_search_bar.sh and directly map this with the favaourable Keys
 
 #### Windows
 1. Install [MSYS2](https://www.msys2.org/) and run:
