@@ -79,6 +79,7 @@ To make SearchBar easily accessible, you can bind it to `Super+S` (Windows Key +
 ![SearchBar Screenshot](screenshots/search_bar_1.png)
 ![SearchBar Screenshot](screenshots/search_bar_2.png)
 ![SearchBar Screenshot](screenshots/search_bar_3.png)
+![SearchBar Screenshot](screenshots/search_bar_4.png)
 
 ## License
 This project is licensed under the MIT License.
