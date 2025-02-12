@@ -1,4 +1,4 @@
-# SearchBar - GTK3 Search Bar with Google Autocomplete
+# PopSearch - GTK3 Search Bar with Google Autocomplete
 
 ## Overview
 SearchBar is a lightweight, modern search bar built with Python and GTK3 that provides Google search suggestions in real-time. It allows users to quickly search Google or specific websites using a simple query format.
