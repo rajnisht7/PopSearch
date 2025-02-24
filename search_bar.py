@@ -207,7 +207,7 @@ class SearchBar(Gtk.Window):
         self.selected_index = -1  # Reset index
     
         # Resize window back to default height when suggestions are cleared
-        self.resize(700, 50)  # Reset to initial size
+        GLib.idle_add(lambda: self.resize(700, 50))  
 
     def select_suggestion(self, listbox, row):
         """Handle clicking a suggestion"""
