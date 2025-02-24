@@ -203,6 +203,11 @@ class SearchBar(Gtk.Window):
     def clear_suggestions(self):
         """Remove previous suggestions"""
         self.listbox.foreach(lambda row: self.listbox.remove(row))
+        self.suggestions = []
+        self.selected_index = -1  # Reset index
+    
+        # Resize window back to default height when suggestions are cleared
+        self.resize(700, 50)  # Reset to initial size
 
     def select_suggestion(self, listbox, row):
         """Handle clicking a suggestion"""
