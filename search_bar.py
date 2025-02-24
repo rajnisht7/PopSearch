@@ -186,10 +186,16 @@ class SearchBar(Gtk.Window):
             row = Gtk.ListBoxRow()
             label = Gtk.Label(label=suggestion)
             label.set_xalign(0)
+            label.set_hexpand(True)
             row.add(label)
             row.show_all()
             self.listbox.add(row)
             
+        # Adjust window size dynamically based on suggestions
+        suggestion_count = len(self.suggestions)
+        new_height = 50 + (suggestion_count * 30)  # Base height + row height
+
+        self.resize(700, min(new_height, 400))  # Max height to avoid too large windows
 
             
 
@@ -214,7 +220,7 @@ class SearchBar(Gtk.Window):
 
         # Custom Site Searches (e.g., youtube/abc searches "abc" on YouTube)	
         if "/" in query:
-            site, search_term = query.split("/", 1) 
+            site, search_term = map(str.strip, query.split("/", 1))
         
             site_search_map = {
                 "youtube": f"https://www.youtube.com/results?search_query={search_term}",
@@ -235,7 +241,7 @@ class SearchBar(Gtk.Window):
                 url = f"https://www.google.com/search?q={query}"  
 
         # Direct URL Opening
-        elif re.match(r"^(https?:\/\/)?([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$", query):
+        elif re.match(r"^(https?:\/\/)?([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})(\/\S*)?$", query):
             url = query if query.startswith(("http://", "https://")) else f"http://{query}"
 
         # Default Google Search
